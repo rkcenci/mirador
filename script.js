@@ -1,26 +1,29 @@
-const multipleItemCarousel = document.querySelector("#carouselExampleControls");
+const multipleItemCarousel = document.querySelector("#carousel_sec_espiritual");
+
+var carousel = new bootstrap.Carousel(multipleItemCarousel, {
+  keyboard: false
+});
+
 
 if (window.matchMedia("(min-width:576px)").matches) {
-  var carousel = new bootstrap.Carousel(multipleItemCarousel, {
-    interval: false,
+
+  var cardWidth = $("#carousel_sec_espiritual .carousel-item").width();
+  var enabledControl = 'right';
+
+  $("#carousel_sec_espiritual .carousel-control-next").on("click", function () {
+    if (enabledControl === 'right') {
+      $("#carousel_sec_espiritual .carousel-inner .carousel-item").animate({ left: -3 * cardWidth + 'px' }, 1500 );
+      enabledControl = 'left';
+    }
   });
 
-  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-  var cardWidth = $(".carousel-item").width();
-
-  var scrollPosition = 0;
-
-  $(".carousel-control-next").on("click", function () {
-    console.log("next");
-    scrollPosition = scrollPosition + cardWidth;
-    $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 600);
+  $("#carousel_sec_espiritual .carousel-control-prev").on("click", function () {
+    if (enabledControl === 'left') {
+       $("#carousel_sec_espiritual .carousel-inner .carousel-item").animate({ left: '0px' }, 1500 ); 
+       enabledControl = 'right';  
+    }
   });
 
-  $(".carousel-control-prev").on("click", function () {
-    console.log("prev");
-    scrollPosition = scrollPosition - cardWidth;
-    $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 600);
-  });
 } else {
   $(multipleItemCarousel).addClass("slide");
 }
