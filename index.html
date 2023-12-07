@@ -403,7 +403,7 @@
           max-height: 100%;
         }
 
-        @media screen and (min-width:576px) {
+        @media screen and (min-width:728px) {
           #sec_espiritual .carousel-inner {
             display: flex;
           }
@@ -414,6 +414,20 @@
             flex: 0 0 calc(100%/3)
           }
         }
+
+        @media screen and (max-width:576px) {
+
+          #sec_espiritual .carousel-item {
+            height: 400px;
+          }
+        }
+
+        @media screen and (min-width:576px) and (max-width:728px) {
+
+          #sec_espiritual .carousel-item {
+            height: 500px;
+        }
+}
 
         #sec_espiritual .carousel-inner {
           padding: 1rem
@@ -520,11 +534,11 @@
           </div>
 
         </div>
-        <button class="carousel-control-prev" type="button" >
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_sec_espiritual" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" >
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel_sec_espiritual" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>

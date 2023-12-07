@@ -5,7 +5,7 @@ var carousel = new bootstrap.Carousel(multipleItemCarousel, {
 });
 
 
-if (window.matchMedia("(min-width:576px)").matches) {
+if (window.matchMedia("(min-width:728px)").matches) {
 
   var cardWidth = $("#carousel_sec_espiritual .carousel-item").width();
   var enabledControl = 'right';
@@ -25,5 +25,6 @@ if (window.matchMedia("(min-width:576px)").matches) {
   });
 
 } else {
+  $("#carousel_sec_espiritual .carousel-inner .carousel-item").first().addClass("active");
   $(multipleItemCarousel).addClass("slide");
 }
