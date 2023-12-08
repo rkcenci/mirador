@@ -39,3 +39,38 @@ window.addEventListener("orientationchange", function() {
 });
 
 refreshCarousel();
+
+$("#sobre").click(function() {
+  $('html,body').animate({
+      behavior: 'smooth',
+      scrollTop: $("#sec_ambiente").offset().top},
+      'slow');
+});
+
+$("#formacao").click(function() {
+  $('html,body').animate({
+      behavior: 'smooth',
+      scrollTop: $("#sec_formacao").offset().top},
+      'slow');
+});
+
+$("#atividades").click(function() {
+  $('html,body').animate({
+      behavior: 'smooth',
+      scrollTop: $("#sec_atividades").offset().top},
+      'slow');
+});
+
+$("#contribua").click(function() {
+  $('html,body').animate({
+      behavior: 'smooth',
+      scrollTop: $("#sec_contribua").offset().top},
+      'slow');
+});
+
+$("#contato").click(function() {
+  $('html,body').animate({
+      behavior: 'smooth',
+      scrollTop: $("#sec_contato").offset().top},
+      'slow');
+});
