@@ -35,7 +35,7 @@ const refreshCarousel = () => {
 }
 
 window.addEventListener("orientationchange", function() {
-  refreshCarousel();
+  location.reload();
 });
 
 refreshCarousel();
