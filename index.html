@@ -452,15 +452,44 @@
 
   </section>
 
+  <style>
+
+   @media screen and (max-width:759px) {
+    .instagram_icon_outside {
+      display: none;
+    }
+    
+    .instagram_icon_inside {
+      display: block;
+      float: left;
+      margin-right: 10px;
+      margin-top: 2px;
+    }
+  }
+
+  @media screen and (min-width:760px) {
+    .instagram_icon_outside {
+      display: block;
+    }
+    
+    .instagram_icon_inside {
+      display: none;
+    }
+  }
+
+    
+  </style>
+
   <section id="sec_instagram" class="p-4 bg-secondary bg-opacity-25">
     <div class="container d-flex justify-content-center">
 
       <div class=" row px-3 py-4 bg-white rounded shadow-sm">
-        <div class="col-12 col-md-3 my-auto d-md-flex">
+        <div class="col-12 col-md-3 my-auto d-md-flex instagram_icon_outside">
           <img src="img/instagram.svg" width="48" height="48" class="m-auto">
         </div>
         <div class="col-12 col-md-6 ">
-          <h4>Acesse nosso Instagram para acompanhar as atividades no Mirador</h4>
+          <img class="instagram_icon_inside" src="img/instagram.svg" width="48" height="48" class="m-auto">
+          <h4 class="instagram_desc">Acesse nosso Instagram para acompanhar as atividades no Mirador</h4>
           <p>instagram.com/ccmirador/</p>
         </div>
         <div class="col-12 col-md-3 my-md-auto">
