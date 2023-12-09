@@ -251,32 +251,6 @@
           max-height: 100%;
         }
 
-        @media screen and (min-width:728px) {
-          #sec_espiritual .carousel-inner {
-            display: flex;
-          }
-
-          #sec_espiritual .carousel-item {
-            display: block;
-            margin-right: 0;
-            flex: 0 0 calc(100%/3)
-          }
-        }
-
-        @media screen and (max-width:576px) {
-
-          #sec_espiritual .carousel-item {
-            height: 400px;
-          }
-        }
-
-        @media screen and (min-width:576px) and (max-width:728px) {
-
-          #sec_espiritual .carousel-item {
-            height: 500px;
-        }
-}
-
         #sec_espiritual .carousel-inner {
           padding: 1rem
         }
@@ -301,6 +275,50 @@
         #sec_espiritual .carousel-control-prev,
         #sec_espiritual .carousel-control-next:hover {
           opacity: .8;
+        }
+
+        @media screen and (max-width:576px) {
+
+          #sec_espiritual .carousel-item {
+            height: 400px;
+          }
+
+          #sec_espiritual .carousel-control-prev,
+          #sec_espiritual .carousel-control-next {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
+
+        @media screen and (min-width:576px) and (max-width:728px) {
+
+          #sec_espiritual .carousel-item {
+            height: 500px;
+          }
+
+          #sec_espiritual .carousel-control-prev,
+          #sec_espiritual .carousel-control-next {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        @media screen and (min-width:728px) {
+          #sec_espiritual .carousel-inner {
+            display: flex;
+          }
+
+          #sec_espiritual .carousel-item {
+            display: block;
+            margin-right: 0;
+            flex: 0 0 calc(100%/3)
+          }
+
+          #sec_espiritual .carousel-control-prev,
+          #sec_espiritual .carousel-control-next {
+            width: 4rem;
+            height: 4rem;
+          }
         }
       </style>
 
